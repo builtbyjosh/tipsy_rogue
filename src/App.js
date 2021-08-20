@@ -1,10 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Login from './components/forms/Login';
+import SignUp from './components/forms/SignUp';
 
 function App() {
   return (
-    <div >
+    <div className='ui container'>
       Heeyooo
+      <Login />
+      '----------------------------'
+      <SignUp />
     </div>
   );
 }
