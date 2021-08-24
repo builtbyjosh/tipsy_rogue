@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ query, setQuery }) => {
+const SearchBar = ({ setQuery, fetchData }) => {
+  const [search, setSearch] = useState('')
 
 
   const onInputChange = (e) => {
-    setQuery(e.target.value);
+    setSearch(e.target.value);
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(query);
+    setQuery(search)
+    console.log(`submitted ${search}`)
+    fetchData(search)
   };
 
   return (
     <div className="ui segment search-bar">
       <form action="" className="ui form" onSubmit={onSubmit}>
         <label htmlFor="">Search for Brewery: Child 1</label>
-        <input type="text" onChange={onInputChange} value={query} />
+        <input type="text" onChange={onInputChange} value={search} />
+
       </form>
     </div>
   );
