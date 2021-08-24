@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ setQuery, fetchData }) => {
+const SearchBar = ({ fetchData }) => {
   const [search, setSearch] = useState('')
-
+  const [query, setQuery] = useState('');
 
   const onInputChange = (e) => {
     setSearch(e.target.value);
@@ -10,8 +10,6 @@ const SearchBar = ({ setQuery, fetchData }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setQuery(search)
-    console.log(`submitted ${search}`)
     fetchData(search)
   };
 

@@ -1,13 +1,7 @@
 import React from 'react';
 
-const SearchItem = () => {
-  return (
-    <div>
-      <p>Child 2 - Child</p>
-      <p>brewery name:</p>
-      <p>brewery Location:</p>
-    </div>
-  );
-}
+const SearchItem = ({ result, setSelected }) => {
+  return <li key={result.id} onClick={() => setSelected(result)} style={{cursor: 'pointer'}} >{result.name}</li>;
+};
 
 export default SearchItem;

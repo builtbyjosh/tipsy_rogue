@@ -3,8 +3,7 @@ import SearchList from './SearchList';
 import SearchBar from './SearchBar';
 import instance from '../axios';
 
-const Search = () => {
-  const [query, setQuery] = useState('');
+const Search = () => {  
   const [results, setResults] = useState([]);
 
   const fetchData = query => {
@@ -16,12 +15,11 @@ const Search = () => {
       console.log(err);
     });
   }
-
   
   return (
     <div>
       <p>parent</p>
-      <SearchBar setQuery={setQuery} fetchData={fetchData} />
+      <SearchBar fetchData={fetchData} />
       <SearchList results={results} />
       
     </div>
