@@ -1,13 +1,12 @@
 import React from 'react';
-import Login from './components/forms/Login';
-import SignUp from './components/forms/SignUp';
+
+import Search from './components/Search';
 
 function App() {
   return (
     <div className="ui container">
       <h1>Tipsy Rogue</h1>
-      <Login />
-      <SignUp />
+      <Search />
     </div>
   );
 }
