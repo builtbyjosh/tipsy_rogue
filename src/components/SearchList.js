@@ -7,7 +7,7 @@ const SearchList = ({ results }) => {
 
   return (
     <div>
-      <h3>Results - Child 2</h3>
+      
       <div className="ui segment">
         <div className="ui two column very relaxed grid">
           <div className="column">
